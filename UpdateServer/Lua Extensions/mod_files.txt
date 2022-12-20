@@ -1,0 +1,3 @@
+add frontiers-lua-extensions.dll
+add lua54.dll
+add mod.ini

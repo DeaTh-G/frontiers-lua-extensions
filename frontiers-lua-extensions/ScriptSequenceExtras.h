@@ -8,6 +8,11 @@ namespace frontiers_lua_extensions
 		inline static void* ms_addrRegisterLuaCallbacks = sigScan("\x48\x89\x5C\x24\x08\x48\x89\x74\x24\x10\x57\x48\x83\xEC\x20\x48\x8B\xF9\x48\x8B\xCA", "xxxxxxxxxxxxxxxxxxxxx", (void*)0x14087EF20);
 		static void InstallHooks();
 
+		/// <summary>
+		/// Triggers a caption and the voice line for it that doesn't require player input to proceed.
+		/// </summary>
+		/// <param name="lua usage:">ShowTalkCaptionNoPrompt(string)</param>
+		/// <param name="string:">ID of the caption text and voice line to trigger.</param>
 		void ShowTalkCaptionNoPrompt(lua_State* in_pLuaState)
 		{
 			app::GameDocument* pDocument = GetDocument();
@@ -32,6 +37,11 @@ namespace frontiers_lua_extensions
 			lua_yieldk(in_pLuaState, 0, 0, 0);
 		}
 
+		/// <summary>
+		/// Takes away the specified Chaos Emerald from the player.
+		/// </summary>
+		/// <param name="lua usage:">RobChaosEmerald(string)</param>
+		/// <param name="string:">Name of the Chaos Emerald.</param>
 		void RobChaosEmerald(lua_State* in_pLuaState)
 		{
 			char emeraldType{};

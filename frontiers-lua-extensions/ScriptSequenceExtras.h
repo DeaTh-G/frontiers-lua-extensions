@@ -5,6 +5,7 @@ namespace frontiers_lua_extensions
 	class ScriptSequenceExtras : public app::ScriptSequence
 	{
 	public:
+		inline static void* ms_addrRegisterLuaCallbacks = sigScan("\x48\x89\x5C\x24\x08\x48\x89\x74\x24\x10\x57\x48\x83\xEC\x20\x48\x8B\xF9\x48\x8B\xCA", "xxxxxxxxxxxxxxxxxxxxx", (void*)0x14087EF20);
 		static void InstallHooks();
 
 		void ShowTalkCaptionNoPrompt(lua_State* in_pLuaState)

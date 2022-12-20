@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "ScriptSequenceExtras.h"
+#include "frontiers-lua-extensions/ScriptSequenceExtras.h"
 
 extern "C"
 {

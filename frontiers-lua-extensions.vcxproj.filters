@@ -45,7 +45,7 @@
     <ClInclude Include="include\helpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ScriptSequenceExtras.h">
+    <ClInclude Include="frontiers-lua-extensions\ScriptSequenceExtras.h">
       <Filter>Header Files\frontiers-lua-extensions</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,7 +56,7 @@
     <ClCompile Include="mod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ScriptSequenceExtras.cpp">
+    <ClCompile Include="frontiers-lua-extensions\ScriptSequenceExtras.cpp">
       <Filter>Source Files\frontiers-lua-extensions</Filter>
     </ClCompile>
   </ItemGroup>

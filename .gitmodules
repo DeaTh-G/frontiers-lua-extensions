@@ -1,0 +1,3 @@
+[submodule "Depends/rangers-api"]
+	path = Depends/rangers-api
+	url = https://github.com/DeaTh-G/rangers-api.git

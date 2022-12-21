@@ -13,7 +13,7 @@ namespace frontiers_lua_extensions
 		/// </summary>
 		/// <param name="lua usage:">ShowTalkCaptionNoPrompt(string)</param>
 		/// <param name="string:">ID of the caption text and voice line to trigger.</param>
-		void ShowTalkCaptionNoPrompt(lua_State* in_pLuaState)
+		int ShowTalkCaptionNoPrompt(lua_State* in_pLuaState)
 		{
 			app::GameDocument* pDocument = GetDocument();
 
@@ -35,6 +35,8 @@ namespace frontiers_lua_extensions
 				PlayLipAnimation(pCaptionName);
 			}
 			lua_yieldk(in_pLuaState, 0, 0, 0);
+
+			return 0;
 		}
 
 		/// <summary>
@@ -42,7 +44,7 @@ namespace frontiers_lua_extensions
 		/// </summary>
 		/// <param name="lua usage:">RobChaosEmerald(string)</param>
 		/// <param name="string:">Name of the Chaos Emerald.</param>
-		void RobChaosEmerald(lua_State* in_pLuaState)
+		int RobChaosEmerald(lua_State* in_pLuaState)
 		{
 			char emeraldType{};
 			app::GameDocument* pDocument = GetDocument();
@@ -61,6 +63,10 @@ namespace frontiers_lua_extensions
 
 			app::MsgRobChaosEmerald msgRobEmerald{ emeraldType };
 			SendMessageImmToPlayer(pDocument, 0, msgRobEmerald);
+
+			lua_pushnumber(in_pLuaState, emeraldType);
+
+			return 0;
 		}
 	};
 }

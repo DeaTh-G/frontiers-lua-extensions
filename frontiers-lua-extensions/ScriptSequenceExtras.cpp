@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "ScriptSequenceExtras.h"
 
-typedef void (app::ScriptSequence::* SequenceFuncPtr)(lua_State*);
+typedef int (app::ScriptSequence::* SequenceFuncPtr)(lua_State*);
 
 /* v1.10: 0x14087EF20 */
 HOOK(void, __fastcall, RegisterLuaCallbacks, frontiers_lua_extensions::ScriptSequenceExtras::ms_addrRegisterLuaCallbacks, app::ScriptSequence* in_pThis, app::game::Script* in_pScript)
